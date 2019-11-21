@@ -1,0 +1,52 @@
+<title>|</title>
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX/AAAZ4gk3AAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
+
+<style>
+    .div
+    {
+        margin: 10px 8.5px;
+        width: 1323px;
+        height: 611px;
+        border: 5px solid black;
+        position: absolute;
+    }
+    html { overflow-y: hidden; }
+</style>
+
+<body>
+    <div class="div"></div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <center><p id="demo" style="font-family: Javanese Text; font-size: 68px;"></p></center>
+</body>
+
+<script>
+    // Set the date we're counting down to
+var countDownDate = new Date("Nov 20, 2019 14:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = hours + "t "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Jeg elsker dig";
+      document.title = 'Jeg elsker dig';
+  }
+}, 1000);
+</script>
